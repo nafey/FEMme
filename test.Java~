@@ -1,0 +1,15 @@
+public class test {
+	public static int[] foo() {
+		int[] x = new int[3];
+		x[0] = 0;
+		x[1] = 1;
+		x[2] = 2;
+		return x;
+	}	
+
+	public static void main(String args[]) {
+		int[] fy;
+		fy = foo();
+		System.out.println(fy[1]);		
+	}
+}

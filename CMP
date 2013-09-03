@@ -1,0 +1,14 @@
+#!/bin/bash
+# COMPILE
+
+base=$(pwd)
+
+cd ~/Documents/Projects/FEMme/src
+#javac -d ~/Documents/Projects/FEMme/bin fem/Node.java
+#javac -d ~/Documents/Projects/FEMme/bin fem/Member.java
+javac -d ~/Documents/Projects/FEMme/bin Main.java
+
+cd ~/Documents/Projects/FEMme/bin
+java Main
+
+cd $base
