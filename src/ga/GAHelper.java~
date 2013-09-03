@@ -1,0 +1,42 @@
+package ga;
+
+public class GAHelper 
+{
+	//aProb is the fractional prob of mutation for a certain string 
+	public static BitString mutate(BitString aBs, double aProb) {
+		for (int i = 1; i <= aBs.getLength(); i++) {
+			if (GAMath.toss(aProb)) {
+				aBs.toggleBitAt(i);
+			}
+		}
+		
+		return aBs;
+	}
+	
+	//bs1 and bs2 must be of same format
+	public static BitString[] crossover(BitString bs1, BitString bs2, double aProb) {
+		BitString[] bs;
+		bs = new BitString[2];
+		
+		if (GAMath.toss(aProb)) {
+			int ix = GAMath.random(bs1.bitCount()) - 1;
+			Bit b;
+			b = new Bit(bs1.getBit(ix).getBitInfo());
+			
+			b.setValue(bs1.getBit(ix).getValue());
+			bs1.getBit(ix).setValue(bs2.getBit(ix).getValue());
+			bs2.getBit(ix).setValue(b.getValue());
+			
+			bs[0] = bs1;
+			bs[1] = bs2;
+		}
+		else {
+			bs[0] = bs1;
+			bs[1] = bs2;
+		}
+		
+		return bs;
+	}
+		
+	
+}

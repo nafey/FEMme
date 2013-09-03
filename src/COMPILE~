@@ -1,0 +1,5 @@
+#!/bin/bash
+# COMPILE
+
+javac src/fem/Node.java
+java src/fem/Node

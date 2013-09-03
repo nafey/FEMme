@@ -1,0 +1,7 @@
+#!/bin/bash
+# COMPILE
+
+cd ~/Documents/Project/FEMme/src
+javac -d ~/Documents/Project/FEMme/bin fem/Node.java
+
+java ~/Documents/Project/FEMme/bin/fem/ Node

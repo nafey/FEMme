@@ -1,0 +1,19 @@
+package FEMme;
+
+public class Node
+{
+	public float X;
+	public float Y;
+	public int Type;
+	
+	Node(float aX, float aY, int aType)
+	{
+		X = aX;
+		Y = aY;
+		type =  aType;
+	}
+	public static void main(String args[])
+	{
+		System.out.println("Node");
+	}
+}

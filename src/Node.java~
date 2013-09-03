@@ -1,0 +1,20 @@
+package mine;
+
+class Node
+{
+	public float X;
+	public float Y;
+	public int Type;
+	
+	Node(float aX, float aY, int aType)
+	{
+		this.X = aX;
+		this.Y = aY;
+		this.Type = aType;
+	}
+	
+	public static void main(String args[])
+	{
+		System.out.println("Node");
+	}
+}
